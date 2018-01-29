@@ -1,0 +1,13 @@
+.b-grid__holder {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2800px;
+  z-index: -1;
+}
+.b-grid__line {
+    width: 100px;
+    float: left;
+    border-right: 1px solid #eee;
+    height: 100%;
+}

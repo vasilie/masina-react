@@ -1,0 +1,19 @@
+.header {
+  background:#ede9e9;
+  overflow: hidden;
+}
+.header__logo {
+  width: 90px;
+  padding: 10px;
+  float: left;
+}
+.header__nav {
+  float: right;
+
+}
+.header__nav__item {
+  display: inline;
+  line-height: 60px;
+  margin-right: 26px;
+  color:#222;
+}

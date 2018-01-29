@@ -1,0 +1,15 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    position: relative;
+    color:#222;
+}
+a {
+  color:#222;
+  text-decoration: none;
+  &:active,
+  &:focus {
+    color:#222;
+
+  }
+}
