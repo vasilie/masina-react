@@ -6,7 +6,7 @@ class MediaItem extends Component {
     return (
       <div className={"media--" + this.props.mediaItem.type} >
           <div className="media__media">
-             <img src={"assets/img/" + this.props.mediaItem.img} class='media-image' alt="" />
+             <img src={"assets/img/" + this.props.mediaItem.img} className='media-image' alt="" />
           </div>
           <div className="media__content">
             <h3>{this.props.mediaItem.title}</h3>

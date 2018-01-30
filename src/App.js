@@ -8,6 +8,7 @@ import Heading from "./Components/Heading";
 import Footer from "./Components/Footer";
 import uuid from "uuid";
 import Todos from "./Components/Todos";
+
 import './App.css';
 
 class App extends Component {
@@ -74,6 +75,20 @@ class App extends Component {
           img:"tito.png",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."
         },
+        {
+          id:uuid.v4(),
+          title: "Samo sloga, a mašina.",
+          type:"vertical",
+          img:"gears.jpg",
+          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."
+        },
+        {
+          id:uuid.v4(),
+          title: "Samo sloga, Matora krsina.",
+          type:"horizontal",
+          img:"masina.jpg",
+          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."
+        },
       ],
       heading:
         {
@@ -104,7 +119,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Header />
           {/*<AddProject addProject = {this.handleAddProject.bind(this)}></AddProject>
           <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/> */}
           <div className="wrapper">
@@ -112,7 +126,6 @@ class App extends Component {
             <Media media={this.state.media} />
           </div>
           {/*<Todos todos={this.state.todos} /> */}
-          <Footer />
     </div>
     );
   }
