@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import $ from "jquery";
-import Projects from "./Components/Projects";
-import Media from "./Components/Media";
-import AddProject from "./Components/AddProject";
-import Header from "./Components/Header";
-import Heading from "./Components/Heading";
-import Footer from "./Components/Footer";
 import uuid from "uuid";
-import Todos from "./Components/Todos";
+import Media from "./Components/Media";
+import Heading from "./Components/Heading";
 
 import './App.css';
 
@@ -16,23 +10,16 @@ class App extends Component {
       super();
       this.state = {
           projects: [],
-          todos: []
+          media:[],
+          heading:{}
       }
   }
-  getTodos(){
-    $.ajax({
-      url:"https://jsonplaceholder.typicode.com/todos",
-      dataType:"json",
-      cache:false,
-      success:function(data){
-        this.setState({todos:data}, function(){
-          console.log(this.state);
-        });
-      }.bind(this),
-      error:function(xhr,status, err){
-        console.log(err);
-      }
-    });
+
+
+  componentWillMount(){
+      this.getProjects();
+  }
+  componentDidMount(){
   }
   getProjects(){
     this.setState({
@@ -97,35 +84,13 @@ class App extends Component {
         }
   });
   }
-  componentWillMount(){
-      this.getProjects();
-      this.getTodos();
-  }
-  componentDidMount(){
-      this.getTodos();
-  }
-  handleDeleteProject(id){
-    let projects = this.state.projects;
-    let index = projects.findIndex(x => x.id === id);
-    projects.splice(index,1);
-    this.setState({projects:projects});
-
-  }
-  handleAddProject(project){
-    let projects = this.state.projects;
-    projects.push(project);
-    this.setState({projects:projects});
-  }
   render() {
     return (
       <div className="App">
-          {/*<AddProject addProject = {this.handleAddProject.bind(this)}></AddProject>
-          <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/> */}
           <div className="wrapper">
             <Heading heading={this.state.heading}/>
             <Media media={this.state.media} />
           </div>
-          {/*<Todos todos={this.state.todos} /> */}
     </div>
     );
   }

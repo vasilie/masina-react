@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import MediaItem from "./MediaItem";
+import React from 'react';
 import PropTypes from 'prop-types';
-import uuid from "uuid";
+import MediaItem from "./MediaItem";
 
-class Media extends Component {
-  render() {
-    let mediaItems;
-    if (this.props.media){
-      mediaItems = this.props.media.map( mediaItem => {
-          return (
-              <MediaItem  key={mediaItem.id} mediaItem={mediaItem} />
-          );
-      });
-    }
-    return (
-      <div className="media-holder">
-          {mediaItems}
-      </div>
-    );
+const Media = (props) =>{
+  console.log(props);
+  let mediaItems;
+  if (props.media){
+    mediaItems = props.media.map(mediaItem =><MediaItem  key={mediaItem.id} mediaItem={mediaItem} />);
   }
+  return (
+    <div className="media-holder">
+      {mediaItems}
+    </div>
+  );
 }
 
+Media.propTypes = {
+  media: PropTypes.arrayOf(PropTypes.object)
+}
+Media.defaultProps = {
+  media: 'no media'
+}
 
 export default Media;

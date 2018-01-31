@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-class Listen extends Component {
-  render() {
-    return (
+const Listen = () =>
       <div>
           Listen
-      </div>
-    );
-  }
-}
+      </div>;
+
 export default Listen;

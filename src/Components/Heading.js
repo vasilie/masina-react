@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Heading extends Component {
-  render() {
-    return (
-      <div className="heading">
-        <h1>{this.props.heading.hOne}</h1>
-        <h2>{this.props.heading.hTwo}</h2>
-      </div>
-    );
-  }
+const Heading = (props) =>{
+  console.log(props);
+  return (
+    <div className="heading">
+      <h1>{props.heading.hOne}</h1>
+      <h2>{props.heading.hTwo}</h2>
+    </div>
+  );
 }
 
-
+Heading.propTypes = {
+  heading: PropTypes.objectOf(PropTypes.string)
+}
+Heading.defaultProps = {
+  heading: 'john'
+};
 export default Heading;
