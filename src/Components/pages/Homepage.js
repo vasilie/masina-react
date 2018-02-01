@@ -71,7 +71,7 @@ class Homepage extends Component {
         },
         {
           id:uuid.v4(),
-          title: "Samo sloga, Matora krsina.",
+          title: "Samo sloga,srbina masina.",
           type:"horizontal",
           img:"masina.jpg",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."

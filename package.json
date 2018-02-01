@@ -38,7 +38,11 @@
     "react": "^16.2.0",
     "react-dev-utils": "^5.0.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^6.0.6",
     "semantic-ui-css": "^2.2.14",
     "semantic-ui-react": "^0.77.2",
@@ -105,5 +109,6 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.5.0",
     "prettier": "^1.10.2"
+
   }
 }
