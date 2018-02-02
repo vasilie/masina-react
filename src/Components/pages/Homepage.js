@@ -64,14 +64,14 @@ class Homepage extends Component {
         },
         {
           id:uuid.v4(),
-          title: "Samo sloga, a mašina.",
+          title:"Zupčana ekipa, a mašina ",
           type:"vertical",
           img:"gears.jpg",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."
         },
         {
           id:uuid.v4(),
-          title: "Samo sloga,srbina masina.",
+          title: "Samo sloga, srbina mašina.",
           type:"horizontal",
           img:"masina.jpg",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."
