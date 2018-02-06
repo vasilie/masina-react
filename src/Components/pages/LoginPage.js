@@ -6,7 +6,7 @@ import { login } from "../../actions/auth";
 // import 'semantic-ui-css/semantic.min.css';
 
 class LoginPage extends React.Component {
-  submit = (data) => this.props.login(data).then(() => this.props.history.push("/"));
+  submit = (data) => this.props.login(data).then(() => this.props.history.push("/dashboard"));
   render(){
 
     return (
