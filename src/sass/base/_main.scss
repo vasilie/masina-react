@@ -1,0 +1,16 @@
+button.button--logout {
+  background: none;
+  -webkit-appearance:none;
+  color:#222;
+  cursor:pointer;
+  border:none;
+  outline: none;
+  font-size: 16px;
+  border-radius: none;
+  &:active,
+  &:hover,
+  &:selected {
+    border-radius:none;
+    -webkit-appearance:none;
+  }
+}

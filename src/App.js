@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Listen from "./Components/Listen";
 import Contact from "./Components/Contact";
 import LoginPage from "./Components/pages/LoginPage";
+import Dashboard from "./Components/pages/Dashboard";
 
 
 import './App.css';
@@ -19,6 +20,7 @@ const App = () =><div>
     <Route exact path='/listen' component={Listen}/>
     <Route exact path='/contact' component={Contact}/>
     <Route exact path='/login' component={LoginPage}/>
+    <Route exact path='/dashboard' component={Dashboard}/>
     <Route component={Footer} />
 </div>;
 

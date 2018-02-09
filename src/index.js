@@ -9,12 +9,18 @@ import './index.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import rootReducer from "./rootReducer";
+import { userLogggedIn } from "./actions/auth";
 
 
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );
+
+if(localStorage.masinaJWT){
+  const user = { token: localStorage.masinaJWT};
+  store.dispatch(userLogggedIn(user));
+}
 
 ReactDOM.render(
   <BrowserRouter>
