@@ -9,6 +9,7 @@ class Nav extends Component {
         <li className="header__nav__item"><NavLink to="/about" activeClassName='active'>About</NavLink></li>
         <li className="header__nav__item"><NavLink to="/listen" activeClassName='active'>Listen</NavLink></li>
         <li className="header__nav__item"><NavLink to="/contact" activeClassName='active'>Contact</NavLink></li>
+        <li className="header__nav__item"><NavLink to="/artpage" activeClassName='active'>Art</NavLink></li>
       </ul>
     );
   }

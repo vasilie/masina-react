@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import $ from "jquery";
+import uuid from "uuid";
 import Projects from "./Components/Projects";
 import Media from "./Components/Media";
 import AddProject from "./Components/AddProject";
 import Header from "./Components/Header";
 import Heading from "./Components/Heading";
 import Footer from "./Components/Footer";
-import uuid from "uuid";
 import Todos from "./Components/Todos";
 
 import './App.css';
-
+const AppStyle = {
+  paddingTop:'60px'
+}
 class App extends Component {
   constructor(){
       super();
@@ -19,13 +21,13 @@ class App extends Component {
           todos: []
       }
   }
-  getTodos(){
+  getMedia(){
     $.ajax({
-      url:"https://jsonplaceholder.typicode.com/todos",
+      url:"http://masina.develop/post",
       dataType:"json",
       cache:false,
       success:function(data){
-        this.setState({todos:data}, function(){
+        this.setState({media:data.data}, function(){
           console.log(this.state);
         });
       }.bind(this),
@@ -99,10 +101,10 @@ class App extends Component {
   }
   componentWillMount(){
       this.getProjects();
-      this.getTodos();
+      this.getMedia();
   }
   componentDidMount(){
-      this.getTodos();
+      this.getMedia();
   }
   handleDeleteProject(id){
     let projects = this.state.projects;
@@ -118,7 +120,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="App" style={AppStyle}>
           {/*<AddProject addProject = {this.handleAddProject.bind(this)}></AddProject>
           <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/> */}
           <div className="wrapper">

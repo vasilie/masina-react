@@ -5,8 +5,9 @@ import App from './App';
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
-import Listen from "./Components/Listen";
+import RadioPlayer from "./Components/RadioPlayer";
 import Contact from "./Components/Contact";
+import ArtPage from "./Components/Pages/ArtPage";
 import { BrowserRouter, Route } from "react-router-dom";
 import registerServiceWorker from './registerServiceWorker';
 
@@ -16,9 +17,10 @@ ReactDOM.render(
       <Route component={Header}/>
       <Route exact path='/' component={App}/>
       <Route exact path='/about' component={About}/>
-      <Route exact path='/listen' component={Listen}/>
+      <Route exact path='/artpage' component={ArtPage}/>
       <Route exact path='/contact' component={Contact}/>
       <Route component={Footer}/>
+      <Route path='/' component={RadioPlayer}/>
     </div>
 
   </BrowserRouter>,
