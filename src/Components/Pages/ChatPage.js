@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import io from 'socket.io-client';
 import $ from 'jquery';
 
-const socketUrl = "http://localhost:3231";
+const socketUrl = "http://masinaradio.net:3231";
 
 var pera;
 
