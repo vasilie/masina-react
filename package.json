@@ -50,8 +50,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "concurrently 'yarn react' 'yarn startChat'",
-    "react": "node scripts/start.js",
+    "start": "concurrently ' yarn react' 'yarn startChat'",
+    "react": "PORT=80 node scripts/start.js",
     "startChat": "nodemon src/Components/chatServer/index.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
