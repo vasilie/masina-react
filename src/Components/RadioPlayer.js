@@ -3,7 +3,7 @@ import $ from "jquery";
 
 const RadioWrapStyle = {
   position: "fixed",
-  right: "10px",
+  right: "-300px",
   top: "67px"
 }
 
@@ -11,6 +11,7 @@ const RadioHandleStyle = {
   width: "30px",
   top: "0",
   position: "absolute",
+  cursor:"pointer",
   left: "-38px"
 }
 class RadioPlayer extends Component {
@@ -24,9 +25,9 @@ class RadioPlayer extends Component {
 
   createPlayer(type){
     (function (win, doc, script, source, objectName) { (win.RadionomyPlayerObject = win.RadionomyPlayerObject || []).push(objectName); win[objectName] = win[objectName] || function (k, v) { (win[objectName].parameters = win[objectName].parameters || { src: source, version: '1.1' })[k] = v; }; var js, rjs = doc.getElementsByTagName(script)[0]; js = doc.createElement(script); js.async = 1; js.src = source; rjs.parentNode.insertBefore(js, rjs); }(window, document, 'script', 'https://www.radionomy.com/js/radionomy.player.js', 'radplayer'));
-     window.radplayer('url', 'masina');
-     window.radplayer('type', type);
-     window.radplayer('autoplay', '1');
+     window.radplayer('url', 'radiomasina');
+     window.radplayer('type', 'medium');
+     window.radplayer('autoplay', '0');
      window.radplayer('volume', '50');
      window.radplayer('color1', '#000000');
      window.radplayer('color2', '#ffffff');
@@ -37,21 +38,26 @@ class RadioPlayer extends Component {
   }
   toggleRadioPlayerWindow(){
     console.log(this.state);
-    if (!this.state.opened){
+    if (this.state.opened){
       $(".radionomy-player__wrapper").animate({right:"-300px"},300);
-      this.setState({opened:true}, function(){
+      this.setState({opened:false}, function(){
         console.log(this.state);
       });
     } else {
       $(".radionomy-player__wrapper").animate({right:"10px"},300);
-      this.setState({opened:false}, function(){
+      this.setState({opened:true}, function(){
         console.log(this.state);
       });
     }
   }
 
-  componentWillMount(){
+  componentDidMount(){
     this.createPlayer("medium");
+    var vaske = document.getElementsByTagName('div');
+
+    console.log("logging vaske array");
+    var vas = Array.from(vaske);
+    console.log(vas);
   }
 
 

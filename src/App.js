@@ -76,21 +76,7 @@ class App extends Component {
           type:"vertical",
           img:"tito.png",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."
-        },
-        {
-          id:uuid.v4(),
-          title: "Samo sloga, a mašina.",
-          type:"vertical",
-          img:"gears.jpg",
-          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."
-        },
-        {
-          id:uuid.v4(),
-          title: "Samo sloga, Matora krsina.",
-          type:"horizontal",
-          img:"masina.jpg",
-          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque at porro dolorem, sapiente suscipit, quaerat aspernatur dolore omnis impedit soluta recusandae in, amet deleniti et velit harum modi, architecto rerum."
-        },
+        }
       ],
       heading:
         {
