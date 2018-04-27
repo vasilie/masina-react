@@ -94,7 +94,7 @@ class ChatPage extends Component {
       $users.html(html);
     });
     socket.on('new message', function(data){
-      $chat.append("<p class='message'><span style='color:"+data.color+"'>"+data.nick+"</span>: "+data.msg+"</p>");
+      $chat.prepend("<p class='message'><span style='color:"+data.color+"'>"+data.nick+"</span>: "+data.msg+"</p>");
     });
   }
 
