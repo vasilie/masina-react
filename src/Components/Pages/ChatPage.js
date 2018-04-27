@@ -30,6 +30,12 @@ class ChatPage extends Component {
     var color = "rgb("+r+","+g+","+b+")";
     return color;
   }
+  getTime(){
+    var currentdate = new Date();
+    var datetime = currentdate.getHours() + ":" 
+    + currentdate.getMinutes();
+    return datetime;
+  }
   initSocket = () => {
     console.log('socket state:' + this.state.socket);
     const socket = io(socketUrl);
@@ -74,6 +80,7 @@ class ChatPage extends Component {
     $messageForm.submit(function(e){
       e.preventDefault();
       socket.emit('send message', $messageBox.val());
+      $("#chat").scrollTop = $("#chat").scrollHeight;
       $messageBox.val('');
     });
     $messageForm.keypress(function (e) {
@@ -94,7 +101,10 @@ class ChatPage extends Component {
       $users.html(html);
     });
     socket.on('new message', function(data){
-      $chat.prepend("<p class='message'><span style='color:"+data.color+"'>"+data.nick+"</span>: "+data.msg+"</p>");
+      $chat.append("<p class='message'><span style='color:"+data.color+"'>"+data.nick+"</span>: "+data.msg+'<span class="time"> -- '+that.getTime()+'</span></p>');
+      $("#chat")[0].scrollTop = $("#chat")[0].scrollHeight;
+      console.log($("#chat")[0]);
+      console.log( $("#chat"));
     });
   }
 
@@ -112,7 +122,6 @@ class ChatPage extends Component {
         <div className="contentWrap">
           <div className="chatWrap">
             <div id="chat">
-              <div className="typeAct"></div>
             </div>
             <form id='send-message'>
               <textarea type="text" id='message'></textarea>

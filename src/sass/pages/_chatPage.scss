@@ -6,7 +6,7 @@
   padding:10px;
   line-height: 1.2rem;
   position:relative;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .chatWrap {
   float: left;
@@ -14,6 +14,10 @@
 }
 p {
   margin: 0;
+}
+.time {
+  font-size: 11px;
+  color: #9a9898;
 }
 textarea {
   width: 100%;

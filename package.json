@@ -51,7 +51,7 @@
   },
   "scripts": {
     "start": "concurrently ' yarn react' 'yarn startChat'",
-    "react": "PORT=80 node scripts/start.js",
+    "react": "PORT=8110 node scripts/start.js",
     "startChat": "nodemon src/Components/chatServer/index.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
