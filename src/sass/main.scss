@@ -6,12 +6,13 @@ $assetpath: '../../assets/' !default;
 @import 'base/functions';
 @import 'base/headings';
 
+@import 'pages/main';
+@import 'pages/chatPage';
+
 @import 'blocks/header';
 @import 'blocks/media';
 @import 'blocks/footer';
 @import 'blocks/b-grid';
+@import 'blocks/b-radio-player';
 
 @import 'layout/main-layout';
-
-@import 'pages/main';
-@import 'pages/chatPage';

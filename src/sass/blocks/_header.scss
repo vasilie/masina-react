@@ -3,6 +3,7 @@
   overflow: hidden;
   position: fixed;
   width: 100%;
+  z-index: 90;
 }
 .header__logo {
   width: 90px;
@@ -11,6 +12,9 @@
 }
 .header__nav {
   float: right;
+  @include breakpoint(mobile) {
+    padding: 0px;
+  }
 
 }
 .header__nav__item {
@@ -18,4 +22,11 @@
   line-height: 60px;
   margin-right: 26px;
   color:#222;
+}
+.radio-icon {
+  cursor: pointer;
+  margin-left: 13px;
+  width: 26px;
+  margin-top: 8px;
+  position: relative;
 }

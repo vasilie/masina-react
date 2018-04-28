@@ -1,0 +1,74 @@
+.radionomy-player__wrapper {
+  position: fixed;
+  right: -320px;
+  top: 67px;
+  z-index: 100;
+  // display: none;
+  @include breakpoint(mobile) {
+    top: 59px;
+    margin-right: -10px;
+  }
+}
+.radio-icon-wrap {
+  width: 50px;
+  height: 50px;
+  background: #ede9e9;
+  position: fixed;
+  top: 5px;
+  right: 9px;
+  z-index: 1000;
+}
+#nickWrap {
+  @include breakpoint(mobile) {
+    width: 100%!important;
+    margin-top: 100px!important;
+  }
+}
+#nickname, textarea {
+  border: 1px solid #222;
+  line-height: 30px;
+  margin-bottom: 14px;
+  width: 300px;
+  @include breakpoint(mobile) {
+    border: 1px solid #222;
+    line-height: 30px;
+    width: 100%;
+    margin-bottom: 14px;
+  }
+}
+textarea {
+  width: 100%;
+  margin-bottom: 0;
+  padding-left:10px;
+  @include breakpoint(mobile) {
+    height: 35px;
+    border-left: none;
+    border-right: none;
+    border-top: 0;
+  }
+}
+#setNick {
+  input {
+    -webkit-appearance: none;
+     border-radius: 0;
+  }
+
+}
+input[type='submit'] {
+    border: 1px solid #222;
+    padding: 10px 19px;
+    margin-bottom: 20px;
+    background: #ede9e9;
+}
+#sendMessage {
+  height: 100%;
+  position: relative;
+}
+#chat {
+  @include breakpoint(mobile) {
+    border: 0;
+    padding: 0;
+    height: calc(100vh - 60px - 123px);
+    margin-bottom: 16px;
+  }
+}

@@ -4,6 +4,9 @@ h1 {
   text-transform: uppercase;
   font-size: 80px;
   padding: 120px 0 4px;
+  @include breakpoint(mobile) {
+    font-size: 30px;
+  }
 }
 h2 {
   margin-bottom: 50px;

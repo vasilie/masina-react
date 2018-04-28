@@ -124,7 +124,7 @@ class ChatPage extends Component {
             <div id="chat">
             </div>
             <form id='send-message'>
-              <textarea type="text" id='message'></textarea>
+              <textarea type="text" id='message' placeholder='Piši ovde'></textarea>
               <input type="submit" />
             </form>
           </div>

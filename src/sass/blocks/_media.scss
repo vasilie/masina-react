@@ -5,10 +5,19 @@
   .media__media {
     width: 24%;
     float: left;
+    @include breakpoint(mobile) {
+      width: 100%;
+      padding: 0;
+
+    }
   }
   .media__content {
     width: 66%;
     float: left;
+    @include breakpoint(mobile) {
+      width: 100%;
+      padding: 0;
+    }
   }
 }
 .media--vertical {
@@ -27,6 +36,9 @@
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 16px;
+    @include breakpoint(mobile) {
+      font-size: 20px;
+    }
   }
   p {
     line-height: 21px;

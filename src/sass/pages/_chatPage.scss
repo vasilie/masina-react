@@ -7,10 +7,19 @@
   line-height: 1.2rem;
   position:relative;
   overflow-y: scroll;
+  p {
+    @include breakpoint(mobile) {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
 }
 .chatWrap {
   float: left;
   width: calc(100% - 300px);
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
 }
 p {
   margin: 0;
@@ -31,6 +40,14 @@ textarea {
   border:1px solid purple;
   width: 30%;
   width: 300px;
+  @include breakpoint(mobile) {
+    float: left;
+    color: white;
+    border: none;
+    height: auto;
+    width: 100%;
+    margin-bottom: 14px;
+  }
 }
 #users p {
   padding:5px 10px;
