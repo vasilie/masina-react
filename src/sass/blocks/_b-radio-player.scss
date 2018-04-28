@@ -41,6 +41,9 @@ textarea {
   width: 100%;
   margin-bottom: 0;
   padding-left:10px;
+  -webkit-appearance:none;
+   border-radius: 0;
+
   @include breakpoint(mobile) {
     height: 35px;
     border-left: none;
@@ -61,6 +64,8 @@ input[type='submit'] {
     padding: 10px 19px;
     margin-bottom: 20px;
     background: #ede9e9;
+    -webkit-appearance:none;
+    border-radius: 0;
 }
 #sendMessage {
   height: 100%;
@@ -70,7 +75,9 @@ input[type='submit'] {
   @include breakpoint(mobile) {
     border: 0;
     padding: 0;
-    height: calc(100vh - 60px - 123px);
+    max-height: calc(100vh - 60px - 123px);
     margin-bottom: 16px;
+    height: auto;
+    min-height: 10px;
   }
 }
