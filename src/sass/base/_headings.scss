@@ -16,4 +16,7 @@ h2 {
   font-size: 14px;
   color: #888;
   margin-bottom: 92px;
+  @include breakpoint(mobile) {
+    margin-bottom: 20px;
+  }
 }
