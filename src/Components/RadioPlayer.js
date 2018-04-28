@@ -26,7 +26,7 @@ class RadioPlayer extends Component {
 
      } else {
        window.radplayer('type', 'medium');
-       window.radplayer('autoplay', '1');
+       window.radplayer('autoplay', '0');
      }
      window.radplayer('volume', '50');
      window.radplayer('color1', '#000000');
