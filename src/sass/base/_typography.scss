@@ -20,6 +20,9 @@ html {
   color:#222;
 
 }
+textarea, input {
+  font-family: $text__family--Roboto;
+}
 a {
   color: inherit;
 }
